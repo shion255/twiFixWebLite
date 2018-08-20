@@ -272,10 +272,7 @@
   .wrapper-list .content-header,
   
   /* === All === */
-  /*[[moments]]*/
-  /*[[connect_badge]]*/
-  /*[[hover-profile]]*/
-  /*[[cards]]*/
+  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/
   [role="textbox"]:focus:before,
   .logged-out .TweetForwardTimeline,
   [data-item-type="follow_entry"],
@@ -298,9 +295,7 @@
   .activity-popup-users {
     max-height: 430px !important;
   }
-  /*[[URL_shortening]]*/
-  /*[[visited_links]]*/
-  /*[[icon]]*/
+  /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   
   /* === ツイート === */
   #timeline .original-tweet-container, /* プロモーション */
@@ -442,8 +437,7 @@
   /*[[recent_searches]]*/
   
   /* === おすすめユーザー/トレンド === */
-  /*[[who_to_follow]]*/
-  /*[[trends]]*/
+  /*[[trends]]*/ /*[[who_to_follow]]*/
   
   /* === 背景 === */
   [data-scribe-reduced-action-queue="true"] > BODY:not(.logged-out):not(.StartPage):not(.ProfilePage):not(.PermalinkPage) {
@@ -452,7 +446,6 @@
     background-repeat: /*[[bg-repeat]]*/ !important;
     background-position: /*[[bg-position]]*/ 46px !important;
   }
-  /*[[profilecard]]*/
   
   /* === メッセージ === */
   .DMActivity {
