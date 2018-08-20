@@ -1,0 +1,505 @@
+/* ==UserStyle==
+@name              twiFixWebLite
+@namespace         https://github.com/AviSynthPlus/twiFixWebLite
+@version           0.1.0
+@author            Shion
+@advanced          dropdown RT-home "ホーム: RT" {
+ RT-home=1 "表示" <<<EOT
+  EOT;
+ RT-home=0 "非表示" <<<EOT
+  .route-home [data-retweet-id], EOT;
+}
+@advanced          dropdown suggest "ホーム: 最近のハイライト等" {
+ suggest=1 "表示" <<<EOT
+  .route-home [data-component-context^="suggest_"]:not([data-item-type="recap_entry"]):not([data-component-context="suggest_ranked_organic_tweet"]), EOT;
+ suggest=0 "非表示" <<<EOT
+  .route-home [data-component-context^="suggest_"]:not([data-component-context="suggest_ranked_organic_tweet"]), EOT;
+}
+@advanced          dropdown connect_badge "通知: バッジ" {
+ connect_badge=1 "表示" <<<EOT
+  EOT;
+ connect_badge=0 "非表示" <<<EOT
+  [data-section-term="top_nav"] [data-global-action="connect"] .new-count, EOT;
+}
+@advanced          dropdown RT-Fav-connect "通知: @ツイートをRT+いいね/RTをRT+いいね" {
+ RT-Fav-connect=1 "表示" <<<EOT
+  EOT;
+ RT-Fav-connect=0 "非表示" <<<EOT
+  [data-activity-type$="_retweet"], [data-component-context$="_mention_activity"], EOT;
+}
+@advanced          dropdown quote_RT "通知: 引用RT" {
+ quote_RT=1 "表示" <<<EOT
+  EOT;
+ quote_RT=0 "非表示" <<<EOT
+  [data-component-context="quote_activity"], EOT;
+}
+@advanced          dropdown RT-list "リスト: RT" {
+ RT-list=1 "表示" <<<EOT
+  EOT;
+ RT-list=0 "非表示" <<<EOT
+  .route-list [data-retweet-id], EOT;
+}
+@advanced          dropdown block "検索: ブロック中のユーザーのツイート" {
+ block=1 "表示" <<<EOT
+  EOT;
+ block=0 "非表示" <<<EOT
+  .wrapper-search #timeline [data-you-block="true"], EOT;
+}
+@advanced          text width-TL "タイムライン幅 590px + XX" "100px"
+@advanced          dropdown moments "モーメント（グローバルナビゲーション）" {
+ moments=1 "表示" <<<EOT
+  EOT;
+ moments=0 "非表示" <<<EOT
+  [data-section-term="top_nav"] [data-global-action="moments"], EOT;
+}
+@advanced          dropdown hover-profile "プロフィール（マウスオーバー）" {
+ hover-profile=1 "表示" <<<EOT
+  EOT;
+ hover-profile=0 "非表示" <<<EOT
+  #profile-hover-container, EOT;
+ hover-profile=2 "フォローボタン非表示" <<<EOT
+  #profile-hover-container .user-actions-follow-button, EOT;
+}
+@advanced          dropdown who_to_follow "おすすめユーザー" {
+ who_to_follow=1 "表示" <<<EOT
+  EOT;
+ who_to_follow=0 "非表示" <<<EOT
+  .wtf-module, .WhoToFollow {
+    display: none !important;
+  } EOT;
+ who_to_follow=2 "フォローボタン非表示" <<<EOT
+  [data-section-id="wtf"] .small-follow-btn {
+    display: none !important;
+  }
+  [data-section-id="wtf"] .username {
+    display: block !important;
+  } EOT;
+}
+@advanced          dropdown trends "トレンド" {
+ trends=1 "表示" <<<EOT
+  EOT;
+ trends=0 "非表示" <<<EOT
+  .Trends {
+    display: none !important;
+  } EOT;
+ trends=2 "クラシックスタイル" <<<EOT
+  .trend-item-stats {
+    display: none !important;
+  }
+  .Trends:not(.Trends--wide) .trend-item {
+    line-height: 13px !important;
+  }
+  .Trends:not(.Trends--wide) .trend-item:not(:last-of-type) {
+    margin-bottom: 7px !important;
+  }
+  .Trends:not(.Trends--wide) .trend-name {
+    font-weight: 400 !important;
+  } EOT;
+}
+@advanced          dropdown recent_searches "最近の検索" {
+ recent_searches=1 "表示" <<<EOT
+  EOT;
+ recent_searches=0 "非表示" <<<EOT
+  .typeahead-recent-searches {
+    display: none !important;
+  }
+  .typeahead-saved-searches {
+    border-top: none !important;
+  } EOT;
+}
+@advanced          dropdown cards "カード" {
+ cards=1 "表示" <<<EOT
+  EOT;
+ cards=2 "一部表示" <<<EOT
+  #stream-items-id [data-card2-name$="moment"], #stream-items-id [data-card2-name*="promo"],
+  #stream-items-id [data-card2-type*="summary"] .card2, EOT;
+}
+@advanced          text width-singlephoto "シングルフォト: 幅上限値" "300px"
+@advanced          text height-singlephoto "シングルフォト: 高さ上限値" "none"
+@advanced          dropdown expand-singlephoto "シングルフォト: マウスオーバーで拡大表示" {
+ expand-singlephoto=1 "有効" <<<EOT
+  #stream-items-id .AdaptiveMedia.is-square:hover {
+    max-width: none !important;
+    max-height: none !important;
+  }
+  .QuoteMedia:hover IMG,
+  .QuoteMedia:hover {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .QuoteMedia:hover IMG {
+    position: static !important;
+  } EOT;
+ expand-singlephoto=0 "無効" <<<EOT
+  EOT;
+}
+@advanced          dropdown URL_shortening "省略されたURLの展開" {
+ URL_shortening=1 "有効" <<<EOT
+  .twitter-timeline-link > SPAN {
+    display: none !important;
+  }
+  .twitter-timeline-link:not(.list-link):after {
+    content: attr(title) !important;
+  }
+  .twitter-timeline-link[title^="https://abema.tv/now-on-air/"]:after {
+    content: "[URL]" !important;
+  }
+  .twitter-timeline-link[title*="l.ask.fm/igoto/"]:after {
+    content: "[Ask.fm]" !important;
+  } EOT;
+ URL_shortening=0 "無効" <<<EOT
+  EOT;
+}
+@advanced          dropdown visited_links "訪問済みリンクの色" {
+ visited_links=1 "通常" <<<EOT
+  EOT;
+ visited_links=2 "灰色" <<<EOT
+  [title^="http"]:visited, [data-query-source="trend_click"]:visited {
+    color: gray !important;
+  } EOT;
+}
+@advanced          dropdown not_follow_you "片思いユーザーのテキストの色" {
+ not_follow_you=1 "通常" <<<EOT
+  EOT;
+ not_follow_you=2 "青色" <<<EOT
+  .permalink-container [data-follows-you="false"][data-you-follow="true"] .TweetTextSize,
+  .js-stream-item [data-follows-you="false"][data-you-follow="true"] .TweetTextSize {
+    color: rgb(0, 0, 136) !important;
+  } EOT;
+ not_follow_you=3 "水色（夜間モード）" <<<EOT
+  .permalink-container [data-follows-you="false"][data-you-follow="true"] .TweetTextSize,
+  .js-stream-item [data-follows-you="false"][data-you-follow="true"] .TweetTextSize {
+    color: aqua !important;
+  } EOT;
+}
+@advanced          dropdown icon "アイコン" {
+ icon=1 "通常" <<<EOT
+  EOT;
+ icon=2 "クラシックスタイル" <<<EOT
+  #user-dropdown-toggle,
+  .WebToast-avatar,
+  .ProfileListItem-avatar,
+  .ProfileCard-avatarLink, .ProfileCard-avatarImage, .ProfileAvatar-placeholderImage,
+  .ProfileAvatar, .ProfileAvatar-image, .without-tweet .Gallery-media, .ProfileCardMini-avatarImage,
+  .DashboardProfileCard-avatarLink, .DashboardProfileCard-avatarImage,
+  .avatar, .Avatar {
+    border-radius: 5px !important;
+  } EOT;
+}
+@advanced          dropdown profilecard "ユーザー一覧" {
+ profilecard=1 "通常" <<<EOT
+  EOT;
+ profilecard=2 "クラシックスタイル" <<<EOT
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard-bg {
+    display: none !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] {
+    width: 64vw !important;
+    min-width: 590px !important;
+    max-width: 690px !important;
+    margin-bottom: 0 !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard {
+    border-radius: 0 !important;
+    border-bottom-color: transparent !important;
+  }
+  [data-component-context="user"]:first-of-type > [data-test-selector="ProfileTimelineUser"]:first-of-type .ProfileCard {
+    border-radius: 5px 5px 0 0 !important;
+  }
+  [data-component-context="user"]:last-of-type > [data-test-selector="ProfileTimelineUser"]:last-of-type .ProfileCard {
+    border-radius: 0 0 5px 5px !important;
+  }
+  [data-component-context="user"]:only-of-type > [data-test-selector="ProfileTimelineUser"]:only-of-type .ProfileCard {
+    border-radius: 5px !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard-content {
+    margin: 10px 15px 15px 15px !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard-avatarLink {
+    float: left !important;
+    margin: 0 6px 0 -5px !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard-avatarImage {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .AdaptiveSearchTimeline--userGrid .ProfileCard,
+  [data-test-selector="ProfileTimelineUser"] .ProfileCard-bio {
+    height: auto !important;
+  }
+  [data-test-selector="ProfileTimelineUser"] .social-proof {
+    width: calc(100% - 54px) !important;
+    margin: 5px 0 -5px 54px !important;
+  } EOT;
+}
+@advanced          text bg-image "背景画像" "画像URLを入力"
+@advanced          dropdown bg-attachment "スクロール時の背景画像" {
+ bg-attachment=1 "スクロール" <<<EOT
+  scroll EOT;
+ bg-attachment=2 "固定" <<<EOT
+  fixed EOT;
+}
+@advanced          dropdown bg-repeat "タイル" {
+ bg-repeat=1 "有効" <<<EOT
+  repeat EOT;
+ bg-repeat=0 "無効" <<<EOT
+  no-repeat EOT;
+}
+@advanced          text bg-position "画像の位置" "left"
+==/UserStyle== */
+
+@-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
+  /* プロフィール */
+  .has-profile-promoted-tweet, .has-profile-suggested-tweet, /* 'Twitterからのおすすめ' */
+  
+  /* status */
+  .suggested-tweet-stream-container, /* プロモツイート */
+  
+  /* ホーム */
+  /*[[RT-home]]*/ /*[[suggest]]*/
+  
+  /* 通知 */
+  /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/
+  
+  /* リスト */
+  /*[[RT-list]]*/
+  
+  /* 検索 */
+  /*[[block]]*/
+  .AdaptiveSearchPage-relatedModule, /* 関連記事 */
+  .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー名' */
+  [data-component-context="newest_list_members"],
+  .wrapper-list .content-header,
+  
+  /* === All === */
+  /*[[moments]]*/
+  /*[[connect_badge]]*/
+  /*[[hover-profile]]*/
+  /*[[cards]]*/
+  [role="textbox"]:focus:before,
+  .logged-out .TweetForwardTimeline,
+  [data-item-type="follow_entry"],
+  [data-promoted="true"], [data-promoted-trend-id], .promoted-account, /* おすすめユーザー */
+  .tweet-timestamp > [data-time][data-aria-label-part="last"] {
+    display: none !important;
+  }
+  .AdaptiveMedia {
+    border-radius: 0 !important;
+  }
+  .list-membership-container > LI {
+    float: left !important;
+    width: 50% !important;
+  }
+  #activity-popup-dialog-dialog > .modal-content {
+    width: 65vw !important;
+    min-width: 520px !important;
+    max-width: 620px !important;
+  }
+  .activity-popup-users {
+    max-height: 430px !important;
+  }
+  /*[[URL_shortening]]*/
+  /*[[visited_links]]*/
+  /*[[icon]]*/
+  
+  /* === ツイート === */
+  #timeline .original-tweet-container, /* プロモーション */
+  #timeline [data-item-type="tweet"] {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+  #stream-items-id [data-tweet-id]:not(.latest-tweet) {
+    padding-bottom: 6px !important;
+  }
+  #stream-items-id .original-tweet {
+    padding-top: 6px !important;
+  }
+  .tweet-timestamp.js-permalink.js-nav.js-tooltip:before {
+    content: attr(title) attr(data-original-title) !important;
+  }
+  .tweet-timestamp > [data-time]:before {
+    content: "【" !important;
+  }
+  .tweet-timestamp > [data-time]:after {
+    content: "】" !important;
+  }
+  #timeline .TweetTextSize {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+  .twitter-timeline-link.u-hidden:not([data-pre-embedded="true"]) {
+    display: inline !important;
+    margin-left: 0.3em !important;
+  }
+  .QuoteTweet-text {
+    max-height: none !important;
+  }
+  [data-poll-state="opened"] .PollXChoice-progress {
+    overflow: visible !important;
+    max-width: none !important;
+    margin: 0 9px 0 0 !important;
+    padding: 0 9px !important;
+    background-color: hsla(0, 0%, 90%, 0.25) !important;
+    border-radius: 5px !important;
+  }
+  #stream-items-id .ProfileTweet-actionList.js-actions {
+    margin: 6px 0 0 0 !important;
+  }
+  .ProfileTweet-actionList.js-actions > DIV {
+    min-width: 0 !important;
+  }
+  .ProfileTweet-actionList.js-actions > DIV:not(:last-child) {
+    margin-right: 12px !important;
+  }
+  .ProfileTweet-actionCount {
+    margin-left: -1px !important;
+  }
+  /*[[not_follow_you]]*/
+  
+  /* シングルフォト */
+  .AdaptiveMedia:not(.is-generic-video) {
+    max-width: none !important;
+    max-height: none !important;
+  }
+  .AdaptiveMedia-threeQuartersWidthPhoto IMG,
+  .AdaptiveMedia-twoThirdsWidthPhoto IMG,
+  .AdaptiveMedia-halfWidthPhoto IMG,
+  .AdaptiveMedia-singlePhoto IMG {
+    position: static !important;
+  }
+  .AdaptiveMedia-singlePhoto IMG {
+    width: 100% !important;
+  }
+  #stream-items-id .AdaptiveMedia.is-square {
+    max-width: /*[[width-singlephoto]]*/ !important;
+    max-height: /*[[height-singlephoto]]*/ !important;
+  }
+  /*[[expand-singlephoto]]*/
+  
+  /* シングルフォト: フォーマット */
+  .AdaptiveMedia-singlePhoto [data-image-url$="jpg"]:hover:after {
+    content: "JPEG" !important;
+  }
+  .AdaptiveMedia-singlePhoto [data-image-url$="png"]:hover:after {
+    content: "PNG" !important;
+  }
+  .AdaptiveMedia-singlePhoto [data-image-url]:hover:after {
+    padding: 0 5px 1px 5px !important;
+    border-radius: 3px !important;
+    font-weight: bold !important;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    position: absolute !important;
+    right: 8px !important;
+    bottom: 8px !important;
+  }
+  
+  /* ダブルフォト */
+  .AdaptiveMedia-triplePhoto,
+  .AdaptiveMedia-doublePhoto {
+    width: auto !important;
+    height: 150px !important;
+  }
+  .AdaptiveMedia-threeQuartersWidthPhoto, .AdaptiveMedia-thirdHeightPhoto,
+  .AdaptiveMedia-twoThirdsWidthPhoto, .AdaptiveMedia-halfHeightPhoto,
+  .AdaptiveMedia-halfWidthPhoto {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .AdaptiveMedia-thirdHeightPhoto:not(:nth-of-type(2)),
+  .AdaptiveMedia-halfHeightPhoto:first-of-type,
+  .AdaptiveMedia-halfWidthPhoto:nth-of-type(2) {
+    margin-left: 4px !important;
+  }
+  
+  /* トリプルフォト */
+  .AdaptiveMedia-halfHeightPhoto:last-child {
+    margin-top: -151px !important;
+    margin-left: 159px !important;
+  }
+  
+  /* クアッドフォト */
+  .AdaptiveMedia-quadPhoto {
+    width: auto !important;
+    height: auto !important;
+  }
+  .AdaptiveMedia-thirdHeightPhoto:nth-child(2) {
+    margin: 4px 0 0 -151px !important;
+  }
+  .AdaptiveMedia-thirdHeightPhoto:last-child {
+    margin-top: -150px !important;
+  }
+  
+  /* === グローバルナビゲーション === */
+  [data-section-term="top_nav"]:not(.global-nav--newLoggedOut) #global-nav-search {
+    width: 25vw !important;
+    max-width: 320px !important;
+  }
+  [data-section-term="top_nav"]:not(.global-nav--newLoggedOut) #global-nav-search > .dropdown-menu {
+    width: 40vw !important;
+    max-width: 400px !important;
+  }
+  /*[[recent_searches]]*/
+  
+  /* === おすすめユーザー/トレンド === */
+  /*[[who_to_follow]]*/
+  /*[[trends]]*/
+  
+  /* === 背景 === */
+  [data-scribe-reduced-action-queue="true"] > BODY:not(.logged-out):not(.StartPage):not(.ProfilePage):not(.PermalinkPage) {
+    background-image: url("/*[[bg-image]]*/") !important;
+    background-attachment: /*[[bg-attachment]]*/ !important;
+    background-repeat: /*[[bg-repeat]]*/ !important;
+    background-position: /*[[bg-position]]*/ 46px !important;
+  }
+  /*[[profilecard]]*/
+  
+  /* === メッセージ === */
+  .DMActivity {
+    width: 70vw !important;
+  }
+  .DirectMessage--sent {
+    position: relative !important;
+    right: 10% !important;
+  }
+  .DirectMessage--received {
+    position: relative !important;
+    left: 10% !important;
+  }
+  .DMComposer .EmojiPicker {
+    margin-right: 10px !important;
+  }
+  
+  /* === リスト === */
+  [data-component-context="more_lists"] .flex-module-header > H3 {
+    font-size: 12px !important;
+  }
+  [data-component-context="more_lists"] .js-create-list-button {
+    margin-top: 10px !important;
+  }
+  
+  /* === 検索 === */
+  .wrapper-search .SidebarFilterModule /* 検索フィルター */ {
+    min-height: 241.5px !important;
+  }
+}
+
+/* タイムライン
+---------------------------------------- */
+@-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent|search\?f=images|i\/moments\/|.*\/(lists$|memberships$|moments$)|(who_to_follow|settings)\/)).*$") {
+  #timeline, .ProfilePage .ProfileHeading {
+    width: calc(590px + /*[[width-TL]]*/) !important;
+    margin-right: -/*[[width-TL]]*/ !important;
+  }
+  .ProfileSidebar--withRightAlignment,
+  .dashboard-right {
+    position: relative !important;
+    left: /*[[width-TL]]*/ !important;
+  }
+  .dashboard-right {
+    margin-left: 10px !important;
+  }
+  .timeline-tweet-box .tweet-form {
+    max-width: 564px !important;
+  }
+}
