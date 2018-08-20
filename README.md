@@ -6,7 +6,7 @@
 ユーザースタイルシートは [こちら](https://raw.githubusercontent.com/AviSynthPlus/twiFixWebLite/master/twiFixWebLite.user.css) からインストールしてください。
 
 ## 機能
-主な機能は Stylus にインストールした twiFixWebLite の [設定](https://i.imgur.com/CaH4veD.png) から確認できます。ここではインストールの際に変更不可能な機能を紹介します。
+主な機能は Stylus にインストールした twiFixWebLite の [設定](https://i.imgur.com/CaH4veD.png) から確認できます。ここでは設定で変更不可能な機能を紹介します。
 
 * ツイート時間が相対時間の時に絶対時間も併記する
 * シングルフォトにマウスオーバーでフォーマット (JPEG, PNG) の表示
