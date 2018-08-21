@@ -1,7 +1,10 @@
 /* ==UserStyle==
 @name              twiFixWebLite
-@namespace         https://github.com/AviSynthPlus/twiFixWebLite
+@namespace         https://github.com/AviSynthPlus
+@description       Twitterを少し使いやすくします
 @version           0.1.0
+@license           MIT
+@homepageURL       https://github.com/AviSynthPlus/twiFixWebLite
 @author            Shion
 @advanced          dropdown RT-home "ホーム: RT" {
  RT-home=1 "表示" <<<EOT
