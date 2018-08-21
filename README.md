@@ -1,6 +1,4 @@
-# twiFixWebLite [![release](https://img.shields.io/github/release/AviSynthPlus/twiFixWebLite.svg)](https://github.com/AviSynthPlus/twiFixWebLite/releases)
-![twiFixWeb](https://i.imgur.com/6owjNmR.png "サンプル")
-
+# twiFixWebLite
 [Twitter Web Client](https://twitter.com/) のユーザースタイルシートです。  
 ユーザースタイルシートのインストールには **Stylus** ([Firefox](https://addons.mozilla.org/ja/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/ja/extensions/details/stylus/)) が必要です。  
 ユーザースタイルシートは [こちら](https://raw.githubusercontent.com/AviSynthPlus/twiFixWebLite/master/twiFixWebLite.user.css) からインストールしてください。
