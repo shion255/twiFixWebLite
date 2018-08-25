@@ -312,12 +312,6 @@
     border-top: none !important;
     border-bottom: none !important;
   }
-  #stream-items-id [data-tweet-id]:not(.latest-tweet) {
-    padding-bottom: 6px !important;
-  }
-  #stream-items-id .original-tweet {
-    padding-top: 6px !important;
-  }
   .tweet-timestamp.js-permalink.js-nav.js-tooltip:before {
     content: attr(title) attr(data-original-title) !important;
   }
