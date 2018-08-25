@@ -71,7 +71,7 @@
     display: none !important;
   } EOT;
  who_to_follow=2 "フォローボタン非表示" <<<EOT
-  [data-section-id="wtf"] .small-follow-btn {
+  [data-section-id="wtf"] .user-actions-follow-button {
     display: none !important;
   }
   [data-section-id="wtf"] .username {
