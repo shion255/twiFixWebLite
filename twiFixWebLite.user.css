@@ -110,7 +110,7 @@
     border-top: none !important;
   } EOT;
 }
-@advanced          dropdown cards "カード" {
+@advanced          dropdown cards "Twitterカード" {
  cards=1 "表示" <<<EOT
   EOT;
  cards=2 "一部表示" <<<EOT
