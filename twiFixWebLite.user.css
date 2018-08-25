@@ -99,6 +99,12 @@
     font-weight: 400 !important;
   } EOT;
 }
+@advanced          dropdown module "モジュール（ダッシュボード）" {
+ module=1 "表示" <<<EOT
+  EOT;
+ module=0 "非表示" <<<EOT
+  .dashboard > .Footer.module, EOT;
+}
 @advanced          dropdown recent_searches "最近の検索" {
  recent_searches=1 "表示" <<<EOT
   EOT;
@@ -275,7 +281,7 @@
   .wrapper-list .content-header,
   
   /* === All === */
-  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/
+  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
   [role="textbox"]:focus:before,
   .logged-out .TweetForwardTimeline,
   [data-item-type="follow_entry"],
