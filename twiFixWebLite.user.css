@@ -195,7 +195,7 @@
     border-radius: 5px !important;
   } EOT;
 }
-@advanced          dropdown profilecard "ユーザー一覧" {
+@advanced          dropdown profilecard "フォロー/フォロワー" {
  profilecard=1 "通常" <<<EOT
   EOT;
  profilecard=2 "クラシックスタイル" <<<EOT
@@ -241,20 +241,20 @@
     margin: 5px 0 -5px 54px !important;
   } EOT;
 }
-@advanced          text bg-image "背景画像" "画像URLを入力"
-@advanced          dropdown bg-attachment "スクロール時の背景画像" {
+@advanced          text bg-image "背景画像" "URL等を入力"
+@advanced          dropdown bg-attachment "背景: スクロール時" {
  bg-attachment=1 "スクロール" <<<EOT
   scroll EOT;
  bg-attachment=2 "固定" <<<EOT
   fixed EOT;
 }
-@advanced          dropdown bg-repeat "タイル" {
+@advanced          dropdown bg-repeat "背景: タイル" {
  bg-repeat=1 "有効" <<<EOT
   repeat EOT;
  bg-repeat=0 "無効" <<<EOT
   no-repeat EOT;
 }
-@advanced          text bg-position "画像の位置" "left"
+@advanced          text bg-position "背景: 位置" "left"
 ==/UserStyle== */
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
