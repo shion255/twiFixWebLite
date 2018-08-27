@@ -235,10 +235,6 @@
   .AdaptiveSearchTimeline--userGrid .ProfileCard, /* 検索: ユーザー *\/
   [data-test-selector="ProfileTimelineUser"] .ProfileCard-bio {
     height: auto !important;
-  }
-  [data-test-selector="ProfileTimelineUser"] .social-proof {
-    width: calc(100% - 54px) !important;
-    margin: 5px 0 -5px 54px !important;
   } EOT;
 }
 @advanced          text bg-image "背景画像" "URL等を入力"
