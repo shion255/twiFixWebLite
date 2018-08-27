@@ -232,7 +232,7 @@
     width: 48px !important;
     height: 48px !important;
   }
-  .AdaptiveSearchTimeline--userGrid .ProfileCard,
+  .AdaptiveSearchTimeline--userGrid .ProfileCard, /* 検索: ユーザー *\/
   [data-test-selector="ProfileTimelineUser"] .ProfileCard-bio {
     height: auto !important;
   }
@@ -269,7 +269,7 @@
   
   /* 検索 */
   .AdaptiveSearchPage-relatedModule, /* 関連記事 */
-  .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー名' */
+  .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー' */
   [data-component-context="newest_list_members"],
   .wrapper-list .content-header,
   
