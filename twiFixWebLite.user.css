@@ -123,6 +123,19 @@
   #stream-items-id [data-card2-name$="moment"], #stream-items-id [data-card2-name*="promo"],
   #stream-items-id [data-card2-type*="summary"] .card2, EOT;
 }
+@advanced          dropdown poll "投票前の得票率" {
+ poll=1 "表示" <<<EOT
+  [data-poll-state="opened"] .PollXChoice-progress {
+    overflow: visible !important;
+    max-width: none !important;
+    margin: 0 9px 0 0 !important;
+    padding: 0 9px !important;
+    background-color: hsla(0, 0%, 90%, 0.25) !important;
+    border-radius: 5px !important;
+  } EOT;
+ poll=0 "非表示" <<<EOT
+  EOT;
+}
 @advanced          text width-singlephoto "シングルフォト: 幅上限値" "300px"
 @advanced          text height-singlephoto "シングルフォト: 高さ上限値" "none"
 @advanced          dropdown expand-singlephoto "シングルフォト: マウスオーバーで拡大表示" {
@@ -277,7 +290,7 @@
   .tweet-timestamp > [data-time][data-aria-label-part="last"] {
     display: none !important;
   }
-  /*[[trends]]*/ /*[[who_to_follow]]*/
+  /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/
   /*[[not_follow_you]]*/ /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
   /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   .AdaptiveMedia {
@@ -321,14 +334,6 @@
   }
   .QuoteTweet-text {
     max-height: none !important;
-  }
-  [data-poll-state="opened"] .PollXChoice-progress {
-    overflow: visible !important;
-    max-width: none !important;
-    margin: 0 9px 0 0 !important;
-    padding: 0 9px !important;
-    background-color: hsla(0, 0%, 90%, 0.25) !important;
-    border-radius: 5px !important;
   }
   #stream-items-id .ProfileTweet-actionList.js-actions {
     margin: 6px 0 0 0 !important;
