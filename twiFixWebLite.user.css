@@ -258,30 +258,22 @@
 ==/UserStyle== */
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
+  /*[[RT-home]]*/ /*[[suggest]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/
+  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
+  
   /* プロフィール */
   .has-profile-promoted-tweet, .has-profile-suggested-tweet, /* 'Twitterからのおすすめ' */
   
   /* status */
   .suggested-tweet-stream-container, /* プロモツイート */
   
-  /* ホーム */
-  /*[[RT-home]]*/ /*[[suggest]]*/
-  
-  /* 通知 */
-  /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/
-  
-  /* リスト */
-  /*[[RT-list]]*/
-  
   /* 検索 */
-  /*[[block]]*/
   .AdaptiveSearchPage-relatedModule, /* 関連記事 */
   .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー名' */
   [data-component-context="newest_list_members"],
   .wrapper-list .content-header,
   
   /* === All === */
-  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
   [role="textbox"]:focus:before,
   .logged-out .TweetForwardTimeline,
   [data-item-type="follow_entry"],
@@ -289,6 +281,9 @@
   .tweet-timestamp > [data-time][data-aria-label-part="last"] {
     display: none !important;
   }
+  /*[[trends]]*/ /*[[who_to_follow]]*/
+  /*[[not_follow_you]]*/ /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
+  /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   .AdaptiveMedia {
     border-radius: 0 !important;
   }
@@ -304,7 +299,6 @@
   .activity-popup-users {
     max-height: 430px !important;
   }
-  /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   
   /* === ツイート === */
   #timeline .original-tweet-container, /* プロモーション */
@@ -352,7 +346,6 @@
   .ProfileTweet-actionCount {
     margin-left: -1px !important;
   }
-  /*[[not_follow_you]]*/
   
   /* シングルフォト */
   .AdaptiveMedia:not(.is-generic-video) {
@@ -372,7 +365,6 @@
     max-width: /*[[width-singlephoto]]*/ !important;
     max-height: /*[[height-singlephoto]]*/ !important;
   }
-  /*[[expand-singlephoto]]*/
   
   /* シングルフォト: フォーマット */
   .AdaptiveMedia-singlePhoto [data-image-url$="jpg"]:hover:after {
@@ -437,10 +429,6 @@
     width: 40vw !important;
     max-width: 400px !important;
   }
-  /*[[recent_searches]]*/
-  
-  /* === おすすめユーザー/トレンド === */
-  /*[[trends]]*/ /*[[who_to_follow]]*/
   
   /* === 背景 === */
   [data-scribe-reduced-action-queue="true"] > BODY:not(.logged-out):not(.StartPage):not(.ProfilePage):not(.PermalinkPage) {
