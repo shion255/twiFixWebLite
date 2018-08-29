@@ -194,6 +194,14 @@
     color: aqua !important;
   } EOT;
 }
+@advanced          dropdown Fav "いいねボタン" {
+ Fav=1 "有効" <<<EOT
+  EOT;
+ Fav=0 "無効" <<<EOT
+  .ProfileTweet-action--favorite, .action-fav-container, /* 検索: 画像 *\/ .js-actionFavorite /* Web通知 *\/ {
+    pointer-events: none !important;
+  } EOT;
+}
 @advanced          dropdown icon "アイコン" {
  icon=1 "通常" <<<EOT
   EOT;
@@ -267,7 +275,7 @@
 ==/UserStyle== */
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
-  /*[[RT-home]]*/ /*[[suggest]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/
+  /*[[RT-home]]*/ /*[[suggest]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/ /*[[Fav]]*/
   /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
   
   /* プロフィール */
