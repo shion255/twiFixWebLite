@@ -85,7 +85,7 @@
   .Trends {
     display: none !important;
   } EOT;
- trends=2 "クラシックスタイル" <<<EOT
+ trends=2 "クラシック" <<<EOT
   .trend-item-stats {
     display: none !important;
   }
@@ -205,7 +205,7 @@
 @advanced          dropdown icon "アイコン" {
  icon=1 "通常" <<<EOT
   EOT;
- icon=2 "クラシックスタイル" <<<EOT
+ icon=2 "クラシック" <<<EOT
   #user-dropdown-toggle,
   .WebToast-avatar,
   .ProfileListItem-avatar,
@@ -219,7 +219,7 @@
 @advanced          dropdown profilecard "フォロー/フォロワー" {
  profilecard=1 "通常" <<<EOT
   EOT;
- profilecard=2 "クラシックスタイル" <<<EOT
+ profilecard=2 "クラシック" <<<EOT
   [data-test-selector="ProfileTimelineUser"] .ProfileCard-bg {
     display: none !important;
   }
