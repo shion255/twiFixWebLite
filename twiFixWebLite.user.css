@@ -332,10 +332,6 @@
   .tweet-timestamp > [data-time]:after {
     content: "】" !important;
   }
-  #timeline .TweetTextSize {
-    font-size: 14px !important;
-    line-height: 18px !important;
-  }
   .twitter-timeline-link.u-hidden:not([data-pre-embedded="true"]) {
     display: inline !important;
     margin-left: 0.3em !important;
