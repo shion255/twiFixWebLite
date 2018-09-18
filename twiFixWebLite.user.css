@@ -12,12 +12,6 @@
  RT-home=0 "非表示" <<<EOT
   .route-home [data-retweet-id], EOT;
 }
-@advanced          dropdown suggest "ホーム: 最近のハイライト等" {
- suggest=1 "表示" <<<EOT
-  .route-home [data-component-context^="suggest_"]:not([data-item-type="recap_entry"]):not([data-component-context="suggest_ranked_organic_tweet"]), EOT;
- suggest=0 "非表示" <<<EOT
-  .route-home [data-component-context^="suggest_"]:not([data-component-context="suggest_ranked_organic_tweet"]), EOT;
-}
 @advanced          dropdown connect_badge "通知: バッジ" {
  connect_badge=1 "表示" <<<EOT
   EOT;
