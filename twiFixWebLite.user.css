@@ -269,7 +269,7 @@
 ==/UserStyle== */
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
-  /*[[RT-home]]*/ /*[[suggest]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/ /*[[Fav]]*/
+  /*[[RT-home]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/ /*[[Fav]]*/
   /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
   
   /* プロフィール */
