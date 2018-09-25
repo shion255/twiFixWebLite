@@ -160,7 +160,7 @@
   .twitter-timeline-link[title^="https://abema.tv/now-on-air/"]:after {
     content: "[URL]" !important;
   }
-  .twitter-timeline-link[title*="l.ask.fm/igoto/"]:after {
+  .twitter-timeline-link[title*="ask.fm/igoto/"]:after {
     content: "[Ask.fm]" !important;
   } EOT;
  URL_shortening=0 "無効" <<<EOT
