@@ -157,9 +157,6 @@
   .twitter-timeline-link:not(.list-link):after {
     content: attr(title) !important;
   }
-  .twitter-timeline-link[title^="https://abema.tv/now-on-air/"]:after {
-    content: "[URL]" !important;
-  }
   .twitter-timeline-link[title*="ask.fm/igoto/"]:after {
     content: "[Ask.fm]" !important;
   } EOT;
