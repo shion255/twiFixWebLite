@@ -24,7 +24,7 @@
  RT-Fav-connect=0 "非表示" <<<EOT
   [data-activity-type$="_retweet"], [data-component-context$="_mention_activity"], EOT;
 }
-@advanced          dropdown quote_RT "通知: 引用RT" {
+@advanced          dropdown quote_RT "通知: 引用ツイート" {
  quote_RT=1 "表示" <<<EOT
   EOT;
  quote_RT=0 "非表示" <<<EOT
