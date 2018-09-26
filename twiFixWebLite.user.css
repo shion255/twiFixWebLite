@@ -295,7 +295,6 @@
   
   /* === All === */
   [role="textbox"]:focus:before,
-  .logged-out .TweetForwardTimeline,
   [data-item-type="follow_entry"],
   [data-promoted="true"], [data-promoted-trend-id], .promoted-account, /* おすすめユーザー */
   .tweet-timestamp > [data-time][data-aria-label-part="last"] {
