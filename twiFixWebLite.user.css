@@ -115,7 +115,14 @@
   EOT;
  cards=2 "一部表示" <<<EOT
   #stream-items-id [data-card2-name$="moment"], #stream-items-id [data-card2-name*="promo"],
-  #stream-items-id [data-card2-type*="summary"] .card2, EOT;
+  #stream-items-id [data-card2-type*="summary"] .card2 {
+    display: none !important;
+  } EOT;
+ cards=3 "縮小表示" <<<EOT
+  #stream-items-id [data-card2-name="summary_large_image"],
+  #stream-items-id [data-card2-name="unified_card"] {
+    width: calc(100% / 1.5) !important;
+  } EOT;
 }
 @advanced          dropdown poll "投票前の得票率" {
  poll=1 "表示" <<<EOT
@@ -267,7 +274,7 @@
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
   /*[[RT-home]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/ /*[[Fav]]*/
-  /*[[cards]]*/ /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
+  /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
   
   /* プロフィール */
   .has-profile-promoted-tweet, .has-profile-suggested-tweet, /* 'Twitterからのおすすめ' */
@@ -289,7 +296,7 @@
   .tweet-timestamp > [data-time][data-aria-label-part="last"] {
     display: none !important;
   }
-  /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/
+  /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/ /*[[cards]]*/
   /*[[not_follow_you]]*/ /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
   /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   .AdaptiveMedia {
