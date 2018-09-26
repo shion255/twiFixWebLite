@@ -113,10 +113,13 @@
 @advanced          dropdown cards "Twitterカード" {
  cards=1 "表示" <<<EOT
   EOT;
- cards=2 "一部表示" <<<EOT
+ cards=2 "一部表示/縮小表示" <<<EOT
   #stream-items-id [data-card2-name$="moment"], #stream-items-id [data-card2-name*="promo"],
   #stream-items-id [data-card2-type*="summary"] .card2 {
     display: none !important;
+  }
+  #stream-items-id [data-card2-name="unified_card"] {
+    width: calc(100% / 1.5) !important;
   } EOT;
  cards=3 "縮小表示" <<<EOT
   #stream-items-id [data-card2-name="summary_large_image"],
