@@ -285,6 +285,9 @@
   /* status */
   .suggested-tweet-stream-container, /* プロモツイート */
   
+  /* ホーム */
+  [data-item-type="who_to_follow_entry"],
+  
   /* 検索 */
   .AdaptiveSearchPage-relatedModule, /* 関連記事 */
   .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー' */
