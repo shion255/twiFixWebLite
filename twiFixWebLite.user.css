@@ -273,6 +273,16 @@
   no-repeat EOT;
 }
 @advanced          text bg-position "背景: 位置" "left"
+@advanced          dropdown issues1 "リスト: 夜間モードにおけるダッシュボード" {
+ issues1=1 "通常" <<<EOT
+  EOT;
+ issues1=2 "修正" <<<EOT
+  [data-component-context="list_follow_card"] .js-list-actions {
+    box-shadow: none !important;
+    border-width: 0 1px 1px 1px !important;
+    border-color: rgb(56, 68, 77) !important;
+  } EOT;
+}
 ==/UserStyle== */
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
@@ -300,7 +310,7 @@
   .tweet-timestamp > [data-time][data-aria-label-part="last"] {
     display: none !important;
   }
-  /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/ /*[[cards]]*/
+  /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/ /*[[cards]]*/ /*[[issues1]]*/
   /*[[not_follow_you]]*/ /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
   /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   .AdaptiveMedia {
