@@ -493,8 +493,8 @@
     width: calc(590px + /*[[width-TL]]*/) !important;
     margin-right: -/*[[width-TL]]*/ !important;
   }
-  .ProfileSidebar--withRightAlignment,
-  .dashboard-right {
+  .AdaptiveSearchPage-relatedModule, /* 関連記事 */
+  .dashboard-right, .ProfileSidebar--withRightAlignment {
     position: relative !important;
     left: /*[[width-TL]]*/ !important;
   }
