@@ -310,7 +310,6 @@
   }
   #activity-popup-dialog-dialog > .modal-content {
     width: 65vw !important;
-    min-width: 520px !important;
     max-width: 620px !important;
   }
   .activity-popup-users {
@@ -429,10 +428,6 @@
   }
   
   /* === グローバルナビゲーション === */
-  [data-section-term="top_nav"]:not(.global-nav--newLoggedOut) #global-nav-search {
-    width: 25vw !important;
-    max-width: 320px !important;
-  }
   [data-section-term="top_nav"]:not(.global-nav--newLoggedOut) #global-nav-search > .dropdown-menu {
     width: 40vw !important;
     max-width: 400px !important;
