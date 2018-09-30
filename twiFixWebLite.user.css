@@ -183,6 +183,7 @@
   } EOT;
 }
 @advanced          color not_follow_you "片思いユーザー名の色" #fff
+@advanced          color RT_color "RTのテキスト色" #fff
 @advanced          dropdown Fav "いいねボタン" {
  Fav=1 "有効" <<<EOT
   EOT;
@@ -333,6 +334,9 @@
   }
   [data-follows-you="false"][data-you-follow="true"] .fullname {
     color: /*[[not_follow_you]]*/;
+  }
+  [data-retweet-id] .TweetTextSize {
+    color: /*[[RT_color]]*/ !important
   }
   .twitter-timeline-link.u-hidden:not([data-pre-embedded="true"]) {
     display: inline !important;
