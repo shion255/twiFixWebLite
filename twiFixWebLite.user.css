@@ -182,20 +182,7 @@
     color: gray !important;
   } EOT;
 }
-@advanced          dropdown not_follow_you "片思いユーザーのテキストの色" {
- not_follow_you=1 "通常" <<<EOT
-  EOT;
- not_follow_you=2 "青色" <<<EOT
-  .permalink-container [data-follows-you="false"][data-you-follow="true"] .TweetTextSize,
-  .js-stream-item [data-follows-you="false"][data-you-follow="true"] .TweetTextSize {
-    color: rgb(0, 0, 136) !important;
-  } EOT;
- not_follow_you=3 "水色（夜間モード）" <<<EOT
-  .permalink-container [data-follows-you="false"][data-you-follow="true"] .TweetTextSize,
-  .js-stream-item [data-follows-you="false"][data-you-follow="true"] .TweetTextSize {
-    color: aqua !important;
-  } EOT;
-}
+@advanced          color not_follow_you "片思いユーザー名の色" #fff
 @advanced          dropdown Fav "いいねボタン" {
  Fav=1 "有効" <<<EOT
   EOT;
@@ -312,7 +299,7 @@
     display: none !important;
   }
   /*[[trends]]*/ /*[[who_to_follow]]*/ /*[[poll]]*/ /*[[cards]]*/ /*[[issues1]]*/
-  /*[[not_follow_you]]*/ /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
+  /*[[expand-singlephoto]]*/ /*[[recent_searches]]*/
   /*[[icon]]*/ /*[[visited_links]]*/ /*[[URL_shortening]]*/ /*[[profilecard]]*/
   .AdaptiveMedia {
     border-radius: 0 !important;
@@ -344,6 +331,9 @@
   }
   .tweet-timestamp > [data-time]:after {
     content: "】" !important;
+  }
+  [data-follows-you="false"][data-you-follow="true"] .fullname {
+    color: /*[[not_follow_you]]*/;
   }
   .twitter-timeline-link.u-hidden:not([data-pre-embedded="true"]) {
     display: inline !important;
