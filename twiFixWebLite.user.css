@@ -19,13 +19,13 @@
  connect_badge=0 "非表示" <<<EOT
   [data-section-term="top_nav"] [data-global-action="connect"] .new-count, EOT;
 }
-@advanced          dropdown RT-Fav-connect "通知: @ツイートをRT+いいね / RTをRT+いいね" {
+@advanced          dropdown RT-Fav-connect " 〃 : @ツイートをRT+いいね / RTをRT+いいね" {
  RT-Fav-connect=1 "表示" <<<EOT
   EOT;
  RT-Fav-connect=0 "非表示" <<<EOT
   [data-activity-type$="_retweet"], [data-component-context$="_mention_activity"], EOT;
 }
-@advanced          dropdown quote_RT "通知: 引用ツイート" {
+@advanced          dropdown quote_RT " 〃 : 引用ツイート" {
  quote_RT=1 "表示" <<<EOT
   EOT;
  quote_RT=0 "非表示" <<<EOT
@@ -43,14 +43,14 @@
  block=0 "非表示" <<<EOT
   .wrapper-search #timeline [data-you-block="true"], EOT;
 }
-@advanced          text width-TL "タイムライン幅 590px + XX" "100px"
-@advanced          dropdown moments "モーメント（グローバルナビゲーション）" {
+@advanced          text width-TL "タイムライン幅 (590px + XX)" "100px"
+@advanced          dropdown moments "モーメント (Global Navigation)" {
  moments=1 "表示" <<<EOT
   EOT;
  moments=0 "非表示" <<<EOT
   [data-section-term="top_nav"] [data-global-action="moments"], EOT;
 }
-@advanced          dropdown hover-profile "プロフィール（マウスオーバー）" {
+@advanced          dropdown hover-profile "プロフィール (hover)" {
  hover-profile=1 "表示" <<<EOT
   EOT;
  hover-profile=0 "非表示" <<<EOT
@@ -141,9 +141,9 @@
  poll=0 "非表示" <<<EOT
   EOT;
 }
-@advanced          text width-singlephoto "シングルフォト: 幅上限値" "300px"
-@advanced          text height-singlephoto "シングルフォト: 高さ上限値" "none"
-@advanced          dropdown expand-singlephoto "シングルフォト: マウスオーバーで拡大表示" {
+@advanced          text width-singlephoto "シングルフォト: 幅上限" "300px"
+@advanced          text height-singlephoto " 〃 : 高さ上限" "none"
+@advanced          dropdown expand-singlephoto " 〃 : マウスオーバーで拡大表示" {
  expand-singlephoto=1 "有効" <<<EOT
   #stream-items-id .AdaptiveMedia.is-square:hover {
     max-width: none !important;
@@ -254,13 +254,13 @@
  bg-attachment=2 "固定" <<<EOT
   fixed EOT;
 }
-@advanced          dropdown bg-repeat "背景: タイル" {
+@advanced          dropdown bg-repeat " 〃 : タイル" {
  bg-repeat=1 "有効" <<<EOT
   repeat EOT;
  bg-repeat=0 "無効" <<<EOT
   no-repeat EOT;
 }
-@advanced          text bg-position "背景: 位置" "left"
+@advanced          text bg-position " 〃 : 位置" "left"
 @advanced          dropdown issues1 "リスト: 夜間モードにおけるダッシュボード" {
  issues1=1 "通常" <<<EOT
   EOT;
