@@ -313,7 +313,7 @@
     max-width: 620px !important;
   }
   .activity-popup-users {
-    max-height: 430px !important;
+    max-height: none !important;
   }
   
   /* === ツイート === */
