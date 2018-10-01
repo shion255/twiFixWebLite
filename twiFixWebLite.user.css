@@ -135,7 +135,7 @@
     max-width: none !important;
     margin: 0 9px 0 0 !important;
     padding: 0 9px !important;
-    background-color: hsla(0, 0%, 90%, 0.25) !important;
+    background-color: hsla(0, 0%, 90%, .25) !important;
     border-radius: 5px !important;
   } EOT;
  poll=0 "非表示" <<<EOT
@@ -335,7 +335,7 @@
   }
   .twitter-timeline-link.u-hidden:not([data-pre-embedded="true"]) {
     display: inline !important;
-    margin-left: 0.3em !important;
+    margin-left: .3em !important;
   }
   .QuoteTweet-text {
     max-height: none !important;
