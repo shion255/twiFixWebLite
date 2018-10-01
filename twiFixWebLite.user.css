@@ -145,17 +145,12 @@
 @advanced          text height-singlephoto " 〃 : 高さ上限" "none"
 @advanced          dropdown expand-singlephoto " 〃 : マウスオーバーで拡大表示" {
  expand-singlephoto=1 "有効" <<<EOT
+  #stream-items-id .AdaptiveMedia.is-square {
+    transition: .3s !important;
+  }
   #stream-items-id .AdaptiveMedia.is-square:hover {
-    max-width: none !important;
+    max-width: 100% !important;
     max-height: none !important;
-  }
-  .QuoteMedia:hover IMG,
-  .QuoteMedia:hover {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .QuoteMedia:hover IMG {
-    position: static !important;
   } EOT;
  expand-singlephoto=0 "無効" <<<EOT
   EOT;
