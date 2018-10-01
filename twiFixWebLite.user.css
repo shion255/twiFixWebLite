@@ -384,10 +384,10 @@
     border-radius: 3px !important;
     font-weight: bold !important;
     color: white !important;
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-color: rgba(0, 0, 0, .3) !important;
     position: absolute !important;
-    right: 8px !important;
-    bottom: 8px !important;
+    top: 8px !important;
+    left: 8px !important;
   }
   
   /* ダブルフォト */
