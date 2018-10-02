@@ -285,7 +285,7 @@
   /* 検索 */
   .AdaptiveSearchTimeline-separationModule, /* 話題のツイート: 'ユーザー' */
   [data-component-context="newest_list_members"],
-  .wrapper-list .content-header,
+  .wrapper-list .content-header, .SidebarFilterModule-toggle, /* 検索フィルター */
   
   /* === All === */
   [role="textbox"]:focus:before,
@@ -465,8 +465,11 @@
   }
   
   /* === 検索 === */
-  .wrapper-search .SidebarFilterModule /* 検索フィルター */ {
+  .wrapper-search .with-4-filters {
     min-height: 241.5px !important;
+  }
+  .wrapper-search .with-3-filters {
+    min-height: 196px !important;
   }
 }
 
