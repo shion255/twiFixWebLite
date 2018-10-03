@@ -446,12 +446,10 @@
     width: 70vw !important;
   }
   .DirectMessage--sent {
-    position: relative !important;
-    right: 10% !important;
+    margin-right: 10% !important;
   }
   .DirectMessage--received {
-    position: relative !important;
-    left: 10% !important;
+    margin-left: 10% !important;
   }
   .DMComposer .EmojiPicker {
     margin-right: 10px !important;
