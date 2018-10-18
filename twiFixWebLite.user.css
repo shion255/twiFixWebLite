@@ -187,6 +187,12 @@
     pointer-events: none !important;
   } EOT;
 }
+@advanced          dropdown DM "DMボタン" {
+ DM=1 "表示" <<<EOT
+  EOT;
+ DM=0 "非表示" <<<EOT
+  .ProfileTweet-action--dm, EOT;
+}
 @advanced          dropdown icon "アイコン" {
  icon=1 "通常" <<<EOT
   EOT;
@@ -271,7 +277,7 @@
 
 @-moz-document regexp("^https:\/\/twitter\.com\/(?!(intent\/|i\/moments\/)).*$") {
   /*[[RT-home]]*/ /*[[RT-Fav-connect]]*/ /*[[quote_RT]]*/ /*[[RT-list]]*/ /*[[block]]*/ /*[[Fav]]*/
-  /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/
+  /*[[hover-profile]]*/ /*[[connect_badge]]*/ /*[[moments]]*/ /*[[module]]*/ /*[[DM]]*/
   
   /* プロフィール */
   .has-profile-promoted-tweet, .has-profile-suggested-tweet, /* 'Twitterからのおすすめ' */
